@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.quietly.android",
+      "sha256_cert_fingerprints": [
+        "88:37:A1:AE:F0:FC:A8:80:05:A5:B9:D0:8F:D3:40:6B:92:13:B0:4C:C8:A1:15:F6:2C:33:CD:1B:43:79:7F:96"
+      ]
+    }
+  }
+]
