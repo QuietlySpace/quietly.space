@@ -4,8 +4,19 @@ export default function Home() {
 
       <div className="grid grid-cols-12 gap-4 items-center h-full content-between">
 
-        <div className="col-span-12 ol-span-12 xl:col-span-12 py-12 w-full justify-between flex">
-
+        <div className="col-span-12 ol-span-12 xl:col-span-12 py-8 w-full flex flex-row items-center justify-between">
+          <nav className="text-xs text-base	font-semibold	font-nunito">
+            <a className="px-2 py-3 group text-pink-500 transition-all duration-300 ease-in-out" href="#">
+              <span className="text-base text-gray-600 font-semibold	font-nunito bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              Terms
+              </span>
+            </a>
+            <a className="px-2 py-3 group text-pink-500 transition-all duration-300 ease-in-out" href="#">
+              <span className="text-base text-gray-600 font-semibold	font-nunito bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              Privacy
+              </span>
+            </a>
+          </nav>
         </div>
 
         <div className="col-span-12 md:col-span-12 xl:col-span-6">
@@ -23,12 +34,7 @@ export default function Home() {
         <div className="col-span-12 ol-span-12 xl:col-span-12 py-8 w-full border-t-[0.5px] border-[#fd8b8f] flex flex-row items-center justify-between">
           <nav className="text-xs text-base	font-semibold	font-nunito">
             <span className="text-gray-600 px-2 py-3 text-base">hello@quietly.space</span>
-            <button>
-              <span className="text-gray-600 px-2 py-3 text-base">Terms</span>
-            </button>
-            <button>
-              <span className="text-gray-600 px-2 py-3 text-base">Privacy</span>
-            </button>
+            <span className="text-gray-600 px-2 py-3 text-base">Built with ❤️ by <span className="text-black">Quietly Space</span></span>
           </nav>
 
           <svg width="32" height="32" viewBox="0 0 32 32">
