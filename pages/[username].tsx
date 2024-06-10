@@ -47,6 +47,11 @@ export default function UserPage({ ...profile }: UserPageProps) {
         <main className="container max-w-[640px] mx-auto center bg-black py-6 flex flex-col justify-center items-center">
             <Head>
                 <title>{`${profile.name} (@${profile.handle}) - Quietly Space`}</title>
+                <meta property="og:title" content={`${profile.name} (@${profile.handle}) - Quietly Space`} />
+                <meta property="og:description" content={profile.bio}></meta>
+                <meta property="og:type" content="profile" />
+                <meta property="og:url" content={`https://www.quietly.space/${profile.username}/`} />
+                <meta property="og:image" content=""/>
             </Head>
 
             <div className="container-header">
