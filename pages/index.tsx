@@ -4,7 +4,10 @@ export default function Home() {
     return (
         <main className="flex h-screen flex-col items-center teste">
             <Head>
-                <title>{`Quietly Space`}</title>
+                <title>Quietly Space</title>
+                <meta property="og:title" content='Quietly Space' />
+                <meta property="og:description" content=''></meta>
+                <meta property="og:url" content={`https://www.quietly.space/`} />
             </Head>
 
             <div className="grid grid-cols-12 gap-4 items-center h-full content-between">
