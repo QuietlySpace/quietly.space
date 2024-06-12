@@ -7,21 +7,21 @@ export default function Home() {
                 <title>Quietly Space</title>
                 <meta property="og:title" content='Quietly Space' />
                 <meta property="og:description" content=''></meta>
-                <meta property="og:url" content={`https://www.quietly.space/`} />
+                <meta property="og:url" content='https://www.quietly.space/' />
             </Head>
 
             <div className="grid grid-cols-12 gap-4 items-center h-full content-between">
 
                 <div className="col-span-12 ol-span-12 xl:col-span-12 py-8 w-full flex flex-row items-center justify-between">
                     <nav className="text-xs text-base	font-semibold	font-nunito">
-                        <a className="px-2 py-3 group text-pink-500 transition-all duration-300 ease-in-out" href="#">
+                        <a className="px-2 py-3 group text-pink-500 transition-all duration-300 ease-in-out" href="https://terms.quietly.space/">
                             <span className="text-base text-gray-600 font-semibold	font-nunito bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                                 Terms
                             </span>
                         </a>
-                        <a className="px-2 py-3 group text-pink-500 transition-all duration-300 ease-in-out" href="#">
+                        <a className="px-2 py-3 group text-pink-500 transition-all duration-300 ease-in-out" href="https://changelog.quietly.space/">
                             <span className="text-base text-gray-600 font-semibold	font-nunito bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                Privacy
+                                Changelog
                             </span>
                         </a>
                     </nav>
@@ -40,8 +40,9 @@ export default function Home() {
                 </div>
 
                 <div className="col-span-12 ol-span-12 xl:col-span-12 py-8 w-full border-t-[0.5px] border-[#fd8b8f] flex flex-row items-center justify-between">
-                    <nav className="text-xs text-base	font-semibold	font-nunito">
+                    <nav className="text-xs text-base font-semibold font-nunito">
                         <span className="text-gray-600 px-2 py-3 text-base">hello@quietly.space</span>
+                        <a href="https://status.quietly.space/"><span className="text-gray-600 px-2 py-3 text-base">Status</span></a>
                         <span className="text-gray-600 px-2 py-3 text-base">Built with ❤️ by <span className="text-black">Quietly Space</span></span>
                     </nav>
 
