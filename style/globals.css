@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -19,7 +18,6 @@
     }
 }
 
-
 .container-header {
     position: relative;
     width: 100%;
@@ -28,25 +26,67 @@
     overflow: hidden;
 }
 
+#teste {
+    position: relative;
+    height: 90px;
+    width: 130px;
 
-.teste {
-
-    background: hsla(31, 95%, 92%, 1);
-
-    background: radial-gradient(circle, hsla(31, 95%, 92%, 1) 0%, hsla(0, 100%, 98%, 1) 100%);
-
-    background: -moz-radial-gradient(circle, hsla(31, 95%, 92%, 1) 0%, hsla(0, 100%, 98%, 1) 100%);
-
-    background: -webkit-radial-gradient(circle, hsla(31, 95%, 92%, 1) 0%, hsla(0, 100%, 98%, 1) 100%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FEEBD6", endColorstr="#FFF4F4", GradientType=1);
+    background-color: white;
+    border-radius: 25px 0px 25px 0;
 }
+
+#teste:before {
+    content: "";
+    position: absolute;
+
+    background-color: transparent;
+    right: -25px;
+    height: 50px;
+    width: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 0 -25px 0 0 #fff;
+}
+
+#teste::after {
+    content: "";
+    position: absolute;
+
+    background-color: transparent;
+    left: 0px;
+    bottom: -50px;
+    height: 50px;
+    width: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 0 -25px 0 0 #fff;
+}
+
+
+/* #teste {
+    width: 200px;
+    height: 100px;
+    z-index: 100;
+    background-color: white;
+} */
+
+/* .teste:before {
+    content: "";
+    display: block;
+    padding: 5px;
+    background-color: #f60;
+    border: 2px solid white;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+} */
+
+
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom,
+    background-color: #fff;
+    /* background: linear-gradient(to bottom,
             transparent,
-            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
 }

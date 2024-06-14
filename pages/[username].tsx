@@ -1,6 +1,8 @@
-import axios, { AxiosResponse, HttpStatusCode } from "axios";
+import axios, { HttpStatusCode } from "axios";
 import type { GetServerSideProps } from "next";
 import Head from "next/head";
+import { ReactElement } from "react";
+import { Layout } from "../components/layout";
 
 type UserPageProps = {
     username: string;
@@ -44,23 +46,23 @@ export const getServerSideProps: GetServerSideProps<UserPageProps> = async ({
 
 export default function UserPage({ ...profile }: UserPageProps) {
     return (
-        <main className="container max-w-[640px] mx-auto center bg-black py-6 flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center">
             <Head>
                 <title>{`${profile.name} (@${profile.handle}) - Quietly Space`}</title>
                 <meta property="og:title" content={`${profile.name} (@${profile.handle}) - Quietly Space`} />
                 <meta property="og:description" content={profile.bio}></meta>
                 <meta property="og:type" content="profile" />
                 <meta property="og:url" content={`https://www.quietly.space/${profile.username}/`} />
-                <meta property="og:image" content=""/>
+                <meta property="og:image" content="" />
             </Head>
 
             <div className="container-header">
-                <img className="absolute top-0 left-0 h-full w-full bg-[#8B43E3] rounded-lg select-none" />
+                <img className="absolute top-0 left-0 h-full w-full bg-[#8B43E3] rounded-[24px] select-none" />
             </div>
 
-            <img className="z-0 w-32 h-32 rounded-full bg-[#8B43E3] border-solid border-4 border-black -mt-20 select-none" src={profile.avatar_url} alt="" />
+            <img className="z-0 w-32 h-32 rounded-full bg-[#8B43E3] border-solid border-4 border-white -mt-20 select-none" src={profile.avatar_url} alt="" />
 
-            <div className="flex flex-col justify-center items-center px-6">
+            <div className="flex flex-col text-black justify-center items-center px-6">
                 <h1 className="font-bold text-2xl">{profile.name}</h1>
                 <span>@{profile.handle}</span>
                 <h2 className="text-center">{profile.bio}</h2>
@@ -70,6 +72,10 @@ export default function UserPage({ ...profile }: UserPageProps) {
                 </div> */}
             </div>
 
-        </main>
+        </div>
     )
 }
+
+UserPage.getLayout = function (page: ReactElement) {
+    return <Layout>{page}</Layout>;
+};
