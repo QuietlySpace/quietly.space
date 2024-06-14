@@ -5,7 +5,7 @@ export function Layout({ children }: { children: ReactElement }) {
     return (
         <div className="grid grid-cols-12 grid-rows-6 h-screen">
 
-            <header className="col-span-8 row-span-5 p-3">
+            <header className="col-span-4 row-span-5 p-3">
                 <div className="bg-slate-200 rounded-[24px] flex h-full bg-no-repeat bg-cover bg-center bg-[url('/static/background.jpg')]">
                     <div id='teste' className="bg-slate-200">
                         <img draggable={false} width={48} src="/static/logo.png" alt="" />
@@ -13,10 +13,19 @@ export function Layout({ children }: { children: ReactElement }) {
 
                     <div className='w-full flex justify-end'>
                         <div className='self-end p-4 mr-2'>
-                            Photo by <a href="https://unsplash.com/@voneciacarswell?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vonecia Carswell</a> on <a href="https://unsplash.com/photos/four-person-holding-each-others-waist-at-daytime-0aMMMUjiiEQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                            Photo by <a href="https://unsplash.com/@ikarovski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ikal</a> on <a href="https://unsplash.com/photos/a-person-standing-on-the-side-of-a-road-near-the-ocean-HS-ZGgEWFFM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
                         </div>
                     </div>
 
+                </div>
+            </header>
+
+            <header className="col-span-4 row-span-5 p-3">
+                <div className='h-full flex flex-col'>
+                    <div className='rounded-[24px] h-full' />
+                    <div className='p-4'>
+                        <h1 className="font-bold text-black	text-7xl text-center font-nunito">Quieeeeeeeetly.</h1>
+                    </div>
                 </div>
             </header>
 
