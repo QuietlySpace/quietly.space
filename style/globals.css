@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -87,12 +89,29 @@ body {
     /* background: linear-gradient(to bottom,
             transparent,
             rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
-    font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
 }
 
 @layer utilities {
     .text-balance {
         text-wrap: balance;
+    }
+}
+
+.rightToLeft {
+    animation: rightToLeft 10s infinite linear;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  
+}
+
+@keyframes rightToLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
     }
 }

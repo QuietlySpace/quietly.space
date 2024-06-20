@@ -2,6 +2,8 @@ import type { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import '../style/globals.css';
+import { usePageLoading } from '../components/usePageLoading';
+import { Spinner } from '@nextui-org/spinner';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
     getLayout?: (page: ReactElement) => ReactNode
@@ -14,6 +16,11 @@ type AppPropsWithLayout = AppProps & {
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     // Use the layout defined at the page level, if available
     const getLayout = Component.getLayout ?? ((page) => page)
+    const { isPageLoading } = usePageLoading();
 
-    return getLayout(<Component {...pageProps} />)
+    return isPageLoading ? (
+        <Spinner />
+    ) : getLayout(
+        <Component {...pageProps} />
+    );
 }
