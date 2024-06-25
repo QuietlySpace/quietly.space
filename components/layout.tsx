@@ -87,24 +87,24 @@ export function Layout(
                 <div className='flex relative whitespace-nowrap overflow-hidden w-full'>
                     <h1 className="rightToLeft font-black text-white text-7xl font-['Six Caps'] flex justify-center items-center">
                         POST&nbsp;&nbsp;
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" className="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                         &nbsp;&nbsp;DISCOVER&nbsp;&nbsp;
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" className="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                         &nbsp;&nbsp;REPLY&nbsp;&nbsp;
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" className="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                         &nbsp;&nbsp;DIVE INTO&nbsp;&nbsp;
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" className="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                         &nbsp;&nbsp;QUIETLY&nbsp;&nbsp;
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" className="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                         &nbsp;&nbsp;SPACE
                     </h1>
@@ -113,4 +113,4 @@ export function Layout(
 
         </div>
     );
-}
+};
