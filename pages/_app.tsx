@@ -1,26 +1,21 @@
-import type { ReactElement, ReactNode } from 'react'
-import type { NextPage } from 'next'
-import type { AppProps } from 'next/app'
-import '../style/globals.css';
-import { usePageLoading } from '../components/usePageLoading';
-import { Spinner } from '@nextui-org/spinner';
+import type { AppProps } from "next/app";
+import { ThemeProvider, type DefaultTheme } from "styled-components";
+import GlobalStyle from "../components/globalstyles";
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-    getLayout?: (page: ReactElement) => ReactNode
-}
+const theme: DefaultTheme = {
+   colors: {
+      primary: "#111",
+      secondary: "#0070f3",
+   },
+};
 
-type AppPropsWithLayout = AppProps & {
-    Component: NextPageWithLayout
-}
-
-export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-    // Use the layout defined at the page level, if available
-    const getLayout = Component.getLayout ?? ((page) => page)
-    const { isPageLoading } = usePageLoading();
-
-    return isPageLoading ? (
-        <Spinner />
-    ) : getLayout(
-        <Component {...pageProps} />
-    );
+export default function App({ Component, pageProps }: AppProps) {
+   return (
+      <>
+         <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <Component {...pageProps} />
+         </ThemeProvider>
+      </>
+   );
 }

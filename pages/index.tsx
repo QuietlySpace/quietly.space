@@ -1,33 +1,39 @@
-import { Layout } from "../components/layout";
-import { ReactElement } from "react";
-import { NextPageWithLayout } from "./_app";
 import Head from "next/head";
+import styled from "styled-components";
 
-const Home: NextPageWithLayout = () => {
+const Leading = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const Home = () => {
     return (
         <>
             <Head>
                 <title>Quietly</title>
-                <meta property="og:title" content='Quietly Space' />
-                <meta property="og:description" content=''></meta>
-                <meta property="og:url" content='https://www.quietly.space/' />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Dive into Spaces" key="desc" />
+                <meta property="og:title" content="Quietly" />
+                <meta
+                    property="og:description"
+                    content="Dive into Spaces"
+                />
+                <meta
+                    property="og:image"
+                    content="/static/logo.png"
+                />
             </Head>
-            {/* <div className="col-span-12 md:col-span-12 xl:col-span-6">
-                <h1 className="font-bold text-black	text-7xl text-center font-nunito">Quieeeeeeeetly.</h1>
-            </div> */}
 
-            <div className='h-screen w-screen flex items-center justify-center'>
-                <div className="animate-pulse">
-                    <img draggable={false} width={64} src="/static/logo.png" alt="Quietly Logo" />
-                </div>
-            </div>
+            <Leading>
+                <img draggable={false} width={64} src="/static/logo.png" alt="Quietly Logo" />
+            </Leading>
+
         </>
     );
 }
 
-// Home.getLayout = function (page: ReactElement) {
-//     return <Layout>{page}</Layout>;
-// };
+
 
 export default Home;
