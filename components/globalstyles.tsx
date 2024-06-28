@@ -1,13 +1,15 @@
 import { createGlobalStyle } from "styled-components";
+import LatoFont from "./fonts";
 
 const GlobalStyle = createGlobalStyle`
+    /* ${LatoFont}, */
    html,
    body {
       color: ${({ theme }) => theme.colors.primary};
       padding: 0;
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      font-family: "Lato", sans-serif;
+      font-style: normal;
    }
 
    a {
