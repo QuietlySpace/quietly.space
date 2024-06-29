@@ -23,7 +23,7 @@ const MainNav = styled.ul`
     -webkit-backdrop-filter: blur(10px) saturate(159%);
     background-color: rgba(245, 245, 245, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.125);
-    border-radius: 1.5rem;
+    border-radius: 2vh;
 
     @media (min-width: 768px) {
         display: flex !important;

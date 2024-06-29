@@ -37,7 +37,7 @@ const SideCard = styled.section`
 const Square = styled.div<{ $color?: string }>`
     aspect-ratio: 1 / 1;
     background-color: ${(props) => (props.$color ?? '#F5F5F5')};
-    border-radius: 1.5rem;
+    border-radius: 2vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -56,7 +56,7 @@ const Rectangle = styled.div<{ $color?: string, $gap?: string, $animated?: boole
     width: ${(props) => (props.$gap ? 'calc(100% - 10px)' : '100%')};
     aspect-ratio: 6 / 3;
     background-color: ${(props) => (props.$color ?? 'transparent')};
-    border-radius: 1.5rem;
+    border-radius: 2vh;
     display: grid; 
     grid-template-columns: 50% 50%; 
     grid-template-rows: 100%; 
@@ -111,6 +111,10 @@ const Description = styled.p`
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.6;
+
+    @media (min-width: 768px) {
+        width: 50%;
+    }
 `;
 
 const Text = styled.p`
@@ -125,11 +129,11 @@ const CardImage = styled.div`
     background-color: #FFFFFF;
     margin-left: 2rem;
     width: 50%;
-    border-radius: 1.5rem;
+    border-radius: 2vh;
     transition: transform 300ms;
     position: relative;
     background-image: url('/static/background.jpg');
-    background-repeat: no-repeat no-repeat;
+    background-repeat: no-repeat;
     background-size: contain;
     overflow: hidden;
     cursor: pointer;
@@ -154,7 +158,7 @@ const Leading = styled.footer`
     width: 80%;
     aspect-ratio: 21 / 9;
     margin-top: auto;
-    border-radius: 1.5rem 1.5rem 0 0;
+    border-radius: 2vh 2vh 0 0;
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -193,7 +197,7 @@ const CreatorsTitle = styled.h4`
 const Attribution = styled.div`
     display: flex;
     justify-content: right;
-    padding: 0.5rem 1rem;
+    padding: 1.2rem 0;
     width: 100%;
 `
 
@@ -224,7 +228,7 @@ const Home = () => {
             <Wrapper id="about">
                 <GradientText $center>Quietly.</GradientText>
                 <Description>
-                    On this page, you'll find our Guidelines that help us keep our community safe and enjoyable for everyone.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </Description>
                 <Leading />
             </Wrapper>
