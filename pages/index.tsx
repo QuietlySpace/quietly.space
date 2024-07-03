@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
-import Menu from "../components/menu";
+import Menu, { } from "../components/menu";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,9 +17,9 @@ const Wrapper = styled.section`
 
 const Container = styled.section<{ $direction?: string }>`
     max-width: calc(1280px - 2rem);
+    margin: 0 auto;
     padding: 0 1rem;
     width: 100%;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-direction: ${(props) => (props.$direction ?? 'row')};
@@ -91,7 +91,7 @@ const GradientText = styled.h1<{ $center?: boolean }>`
 
 const Title = styled.h4<{ $color?: string }>`
     color: ${(props) => (props.$color ?? '#191919')};;
-    font-size: 1.728rem;
+    font-size: clamp(1rem, 2vw + 1rem, 1.75rem);
     margin: 0;
     font-weight: 500;
 `;
@@ -125,6 +125,35 @@ const Text = styled.p`
     line-height: 1.6;
 `;
 
+const CopyrightSection = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+`;
+
+const Contact = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+`;
+
+const ContactText = styled.span<{ $color?: string }>`
+    color: ${(props) => (props.$color ?? '#F5F5F5')};
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+`;
+
+const Copyright = styled.span`
+    color: #F5F5F5;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+`;
+
 const CardImage = styled.div`
     background-color: #FFFFFF;
     margin-left: 2rem;
@@ -145,13 +174,28 @@ const CardImage = styled.div`
     }
 `
 
+const Slogan = styled.h1`
+    font-size: 12vh;
+    margin: 0;
+    cursor: pointer;
+    transition: transform 2s;
+    &:hover,
+    &:focus {
+        -ms-transform: scale(0.94); 
+        -webkit-transform: scale(0.94); 
+        transform: scale(0.94); 
+    }
+`
+
 const Footer = styled.footer`
     width: 100%;
     height: 70vh;
     background-color: #000000;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: end;
     align-items: center;
+    position: relative;
 `;
 
 const Leading = styled.footer`
@@ -190,7 +234,7 @@ const SideText = styled.div`
 const CreatorsTitle = styled.h4`
     margin: 0;
     color: #191919;
-    font-size: 1.728rem;
+    font-size: 2.8vh;
     font-weight: 500;
 `
 
@@ -199,6 +243,27 @@ const Attribution = styled.div`
     justify-content: right;
     padding: 1.2rem 0;
     width: 100%;
+`
+
+const FooterContent = styled.div`
+    max-width: calc(1280px - 2rem);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    > * {
+        width: 50%;
+        height: 100%;
+        border-bottom: 1px solid #141414;
+        /* border-top: 1px solid #141414; */
+        &:first-child {
+            border-left: 1px solid #141414;
+            border-right: 1px solid #141414;
+        }
+        &:last-child {
+            border-right: 1px solid #141414;
+        }
+    }
 `
 
 
@@ -304,7 +369,20 @@ const Home = () => {
             </Wrapper>
 
             <Footer id="contact">
-                <p>Footer</p>
+                <FooterContent>
+                    <div></div>
+                    <div></div>
+                </FooterContent>
+
+                <Container>
+                    <CopyrightSection>
+                        <Copyright>© {new Date().getFullYear()} Quietly Space</Copyright>
+                        <Contact>
+                            <ContactText $color="gray">contact us</ContactText>
+                            <ContactText style={{ cursor: 'pointer' }} onClick={() => window.open('mailto:hello@quietly.space')}>hello@quietly.space</ContactText>
+                        </Contact>
+                    </CopyrightSection>
+                </Container>
             </Footer>
         </>
     );

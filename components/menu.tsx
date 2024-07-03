@@ -31,9 +31,8 @@ const MainNav = styled.ul`
         justify-content: flex-end;
         gap: 1rem;
     }
-
 `
-const NavLi = styled.li`
+export const NavLi = styled.li`
     text-align: center;
     display: flex;
     justify-content: center;
@@ -43,7 +42,7 @@ const NavLi = styled.li`
     padding: 0;
     gap: 0.3rem;
 `
-const NavLink = styled.span`
+export const NavLink = styled.span`
     list-style-type: none;
     display: flex;
     flex-direction: column;
